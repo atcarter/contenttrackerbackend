@@ -4,6 +4,15 @@ class ContentsController < ApplicationController
     render json: contents
   end
 
+  def show
+    if the_content_exists?
+      content = Content.find_by_id(params[:id])
+      render json: content
+    else
+      render json: {error: "Content not found."}
+    end
+  end
+
   private 
 
   def the_content_exists?
