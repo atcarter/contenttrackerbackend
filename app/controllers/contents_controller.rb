@@ -23,8 +23,9 @@ class ContentsController < ApplicationController
 
   def destroy
     content = Content.find_by_id(params[:id])
+    title = content.title
     content.destroy
-    render json: {alert: "Content was deleted."}
+    render json: {alert: "#{title} was deleted."}
   end
 
   private 
