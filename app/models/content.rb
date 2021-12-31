@@ -2,8 +2,9 @@ class Content < ApplicationRecord
   has_many :reviews, dependent: :destroy
 
   validates :title, presence: true
+  validates :type, presence: true
   validates :details
-  validates :year
+  validates :year, presence: true
   before_validation :titlecase
 
   private
