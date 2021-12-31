@@ -1,6 +1,6 @@
 class ContentsController < ApplicationController
   def index
-    content = Content.all
-    render json: content
+    contents = Content.all
+    render json: contents
   end
 end
