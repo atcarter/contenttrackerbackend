@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_12_31_060017) do
     t.text "details"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "type"
+    t.string "content_type"
   end
 
   create_table "reviews", force: :cascade do |t|
