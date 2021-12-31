@@ -21,6 +21,12 @@ class ContentsController < ApplicationController
     end
   end
 
+  def destroy
+    content = Content.find_by_id(params[:id])
+    content.destroy
+    render json: {alert: "Content was deleted."}
+  end
+
   private 
 
   def the_content_exists?
