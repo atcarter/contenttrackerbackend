@@ -21,6 +21,13 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    review = Review.find_by_id(params[:id])
+    name = review.username
+    review.destroy
+    render json: {alert: "#{name}'s review was deleted."}
+  end
+
   private
 
   def the_review_exists?
