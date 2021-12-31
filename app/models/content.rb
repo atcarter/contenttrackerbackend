@@ -3,7 +3,7 @@ class Content < ApplicationRecord
 
   validates :title, presence: true
   validates :type, presence: true
-  validates :details
+  validates :details, presence: true
   validates :year, presence: true
   before_validation :titlecase
 
