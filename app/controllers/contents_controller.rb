@@ -13,6 +13,14 @@ class ContentsController < ApplicationController
     end
   end
 
+  def create
+    content = Content.new(content_params)
+
+    if content.save
+      render json: content
+    end
+  end
+
   private 
 
   def the_content_exists?
