@@ -13,10 +13,10 @@ user2 = "xXuser2Xx"
 user3 = "us3r3"
 user4 = "u$er4"
 
-content1 = Content.create(title: "Star Wars: Episode V - The Empire Strikes Back", type: "movie", year: 1980, details: "In this sequel to Star Wars, Luke and the rebels continue their adventure across the galaxy.")
-content2 = Content.create(title: "Interstellar", type: "movie", year: 2014, details: "Matthew McConaughey plays a former NASA pilot who is recruited to venture across space and time to save a dying Earth.")
-content3 = Content.create(title: "The Thing", type: "movie", year: 1982, details: "At a research base in Antartica, a team of scientists discover something in the ice that never should have been freed..")
-content4 = Content.create(title: "Alien", type: "movie", year: 1979, details: "In space, no one can hear you scream. The crew of the Nostromo soon discover this as they cross paths with the deadliest organism in the universe.")
+content1 = Content.create(title: "Star Wars: Episode V - The Empire Strikes Back", content_type: "movie", year: 1980, details: "In this sequel to Star Wars, Luke and the rebels continue their adventure across the galaxy.")
+content2 = Content.create(title: "Interstellar", content_type: "movie", year: 2014, details: "Matthew McConaughey plays a former NASA pilot who is recruited to venture across space and time to save a dying Earth.")
+content3 = Content.create(title: "The Thing", content_type: "movie", year: 1982, details: "At a research base in Antartica, a team of scientists discover something in the ice that never should have been freed..")
+content4 = Content.create(title: "Alien", content_type: "movie", year: 1979, details: "In space, no one can hear you scream. The crew of the Nostromo soon discover this as they cross paths with the deadliest organism in the universe.")
 
 review1 = Review.create(username: user1, content_id: content1.id, rating: 5, description: "This is a very long-winded way to tell a person that the content of this review is fake and just for testing purposes.")
 review11 = Review.create(username: user1, content_id: content2.id, rating: 5, description: "This is a very long-winded way to tell a person that the content of this review is fake and just for testing purposes.")
