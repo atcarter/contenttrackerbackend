@@ -13,6 +13,14 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def create
+    review = Review.new(content_params)
+
+    if review.save
+      render json: review
+    end
+  end
+
   private
 
   def the_review_exists?
