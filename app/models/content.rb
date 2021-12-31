@@ -11,6 +11,6 @@ class Content < ApplicationRecord
 
   def titlecase
     self.title = self.title.titleize
-    self.content_type = self.type.titleize
+    self.content_type = self.content_type.titleize
   end
 end
