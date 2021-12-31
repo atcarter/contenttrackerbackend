@@ -4,6 +4,15 @@ class ReviewsController < ApplicationController
     render json: reviews
   end
 
+  def show
+    if the_review_exists?
+      review = Review.find_by_id(params[:id])
+      render json: review
+    else
+      render json: {error: "Review not found."}
+    end
+  end
+
   private
 
   def the_review_exists?
